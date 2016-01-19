@@ -46,7 +46,7 @@ function Get-AWS-SecurityGroups
    [cmdletbinding()]
    param  ($Region, $ProfileName) 
 
-   if ($Region -ne "") { $Region = (Get-AWSRegion).Region }
+   if ($Region -eq "") { $Region = (Get-AWSRegion).Region }
    $x = 1
    foreach ($AWSRegion in $Region) # Loop through all the available regions which are available to us
    {
