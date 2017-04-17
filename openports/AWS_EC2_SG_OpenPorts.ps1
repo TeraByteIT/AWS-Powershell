@@ -1,4 +1,4 @@
-﻿###################################################################################################################################################################
+###################################################################################################################################################################
 #                                                                                                                                                                 #
 # Author : Marcus Dempsey                                                                                                                                         #
 # Date   : 18/02/2017                                                                                                                                             #
@@ -10,7 +10,7 @@
 Param(
    [string] $AccessKey,
    [string] $SecretKey,
-   [string] $Port,     
+   [string] $Port,
    [switch] $SaveData = $false
 )
 
@@ -37,7 +37,7 @@ Function DisplayHelp {
 
 Function Get-EC2SG ($AccessKey, $SecretKey, $Port, $SaveData) {
    If ($AccessKey -ne "" -and $SecretKey -ne "") {   # Make sure we have some something in the AWS keys for authentication
-      Set-AWSCredentials -AccessKey $AccesKey -SecretKey $SecretKey
+      Set-AWSCredentials -AccessKey $AccessKey -SecretKey $SecretKey
    }
    else {
       Write-Host "AWS Credentials not correct, please check." -ForegroundColor Red
