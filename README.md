@@ -1,2 +1,2 @@
 # AWS-Powershell
-AWS PowerShell scripts
+AWS PowerShell related scripts
